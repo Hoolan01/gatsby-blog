@@ -20,6 +20,9 @@ const BlogLink = styled(Link)`
 `
 
 const BlogBody = styled.div`
+  box-shadow: 0 2px 4px 0 rgb(14 30 37 / 12%);
+  padding: 50px 20px;
+  border-radius: 5px;
   margin-bottom: 50px;
 `
 
@@ -27,7 +30,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div>
-        <Title>Thoughts by Yihua</Title>
+        <Title>Find the latest posts below...</Title>
         <h4>{data.allMarkdownRemark.totalCount} Post</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <BlogBody key={node.id}>
